@@ -13,7 +13,18 @@ class OklasoftNetworkingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let goodURL: URL = URL(string:"https://oklasoftware.com/")!
+        let badURL: URL = URL(string:"https://kvnrkvnernvkernvk/thisurldoesnotexist")!
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(testGoodURL),
+                                               name: .networkingSuccessNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(testBadURL),
+                                               name: .networkingErrorNotification,
+                                               object: nil)
+        URLSession.shared.getReturnedDataFrom(url: goodURL, with: nil)
+        URLSession.shared.getReturnedDataFrom(url: badURL, with: nil)
     }
     
     override func tearDown() {
@@ -21,9 +32,38 @@ class OklasoftNetworkingTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGoodURL(aNotification: Notification) {
+        guard let userInfo: [AnyHashable:Any] = aNotification.userInfo
+            else {
+            XCTFail()
+            return
+        }
+        if let infoString:String = userInfo["key"] as? String {
+            if infoString == userInfoKey {
+                XCTAssert(true)
+            }
+        }
+    }
+    
+    func testBadURL(aNotification: Notification) {
+        guard let userInfo: [AnyHashable:Any] = aNotification.userInfo
+            else {
+                XCTFail()
+                return
+        }
+        if let infoString:String = userInfo["key"] as? String {
+            if infoString == errorInfoKey {
+                XCTAssert(true)
+            }
+        }
+    }
+    
+    func testErrorconversion() {
+        let error: oklasoftError = oklasoftError(errorCode: 100,
+                                                 userInfo: nil,
+                                                 localizedDescription: "test error")
+        let convertedError: Error = error.toError()
+        XCTAssertNotNil(convertedError)
     }
     
     func testPerformanceExample() {

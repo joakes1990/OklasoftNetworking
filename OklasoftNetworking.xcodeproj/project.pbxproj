@@ -10,6 +10,9 @@
 		D0ACEEE31F05CD5E005C35B6 /* OklasoftNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ACEED91F05CD5E005C35B6 /* OklasoftNetworking.framework */; };
 		D0ACEEE81F05CD5E005C35B6 /* OklasoftNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEE71F05CD5E005C35B6 /* OklasoftNetworkingTests.swift */; };
 		D0ACEEEA1F05CD5E005C35B6 /* OklasoftNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D0ACEEDC1F05CD5E005C35B6 /* OklasoftNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0ACEEF41F05CD88005C35B6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* Networking.swift */; };
+		D0ACEEF61F05D283005C35B6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF51F05D283005C35B6 /* Notifications.swift */; };
+		D0ACEEF81F05D79C005C35B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF71F05D79C005C35B6 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		D0ACEEE21F05CD5E005C35B6 /* OklasoftNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OklasoftNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACEEE71F05CD5E005C35B6 /* OklasoftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OklasoftNetworkingTests.swift; sourceTree = "<group>"; };
 		D0ACEEE91F05CD5E005C35B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0ACEEF31F05CD88005C35B6 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D0ACEEF51F05D283005C35B6 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		D0ACEEF71F05D79C005C35B6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				D0ACEEDC1F05CD5E005C35B6 /* OklasoftNetworking.h */,
 				D0ACEEDD1F05CD5E005C35B6 /* Info.plist */,
+				D0ACEEF31F05CD88005C35B6 /* Networking.swift */,
+				D0ACEEF51F05D283005C35B6 /* Notifications.swift */,
+				D0ACEEF71F05D79C005C35B6 /* Errors.swift */,
 			);
 			path = OklasoftNetworking;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					D0ACEED81F05CD5E005C35B6 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					D0ACEEE11F05CD5E005C35B6 = {
 						CreatedOnToolsVersion = 9.0;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ACEEF61F05D283005C35B6 /* Notifications.swift in Sources */,
+				D0ACEEF81F05D79C005C35B6 /* Errors.swift in Sources */,
+				D0ACEEF41F05CD88005C35B6 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +340,7 @@
 		D0ACEEEE1F05CD5E005C35B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -341,6 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oklasoft.OklasoftNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -348,6 +363,7 @@
 		D0ACEEEF1F05CD5E005C35B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -369,6 +385,7 @@
 		D0ACEEF11F05CD5E005C35B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 26VT895967;
 				INFOPLIST_FILE = OklasoftNetworkingTests/Info.plist;
@@ -382,6 +399,7 @@
 		D0ACEEF21F05CD5E005C35B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 26VT895967;
 				INFOPLIST_FILE = OklasoftNetworkingTests/Info.plist;
