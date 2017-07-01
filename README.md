@@ -4,7 +4,7 @@
 
 ## URLSession extention to simplify networking and make it a bit more swifty
 
-This framework is still under active development and only supports GET requests for now (it's a componet of a bigger project POST DELETE and PUT should come soon)
+This framework is still under active development and should see more utility added as it becomes the cornerstone of networking in more OKS projects.
 
 Basic useage of OklasoftNetworking is acheaved by calling the `getReturnedDataFrom(url: URL, with completion: networkCompletion?)` method on a `URLSession` instance.
 networkCompletion is typedefed to the same standard closure that is used for URLSession `{(Data?, URLResponce?, Error?) -> Void}`
