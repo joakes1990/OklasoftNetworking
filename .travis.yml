@@ -1,0 +1,6 @@
+language: swift
+xcode_project: OklasoftNetworking.xcodeproj
+xcode_scheme: OklasoftNetworkingTests
+xcode_sdk: macosx10.12
+osx_image: xcode8.3
+
