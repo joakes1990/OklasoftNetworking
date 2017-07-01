@@ -22,3 +22,6 @@ struct oklasoftError: Error {
     }
     
 }
+let retunedBadDataError: oklasoftError = oklasoftError(errorCode: 1005,
+                                                       userInfo: nil,
+                                                       localizedDescription: "Incomplete or corrupted data was returned from the server with out error.")

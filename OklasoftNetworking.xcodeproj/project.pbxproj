@@ -429,6 +429,7 @@
 				D0ACEEEF1F05CD5E005C35B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0ACEEF01F05CD5E005C35B6 /* Build configuration list for PBXNativeTarget "OklasoftNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +438,7 @@
 				D0ACEEF21F05CD5E005C35B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

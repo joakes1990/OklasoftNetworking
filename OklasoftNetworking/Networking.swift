@@ -13,8 +13,7 @@ public extension URLSession  {
     public typealias networkCompletion = (Data?, URLResponse?, Error?) -> Void
     
     public func getReturnedDataFrom(url: URL, with completion: networkCompletion?) {
-        let session: URLSession = .shared
-        let task: URLSessionDataTask = session.dataTask(with: url,
+        let task: URLSessionDataTask = self.dataTask(with: url,
                                                         completionHandler: completion ?? URLSession.standardCompletion)
         task.resume()
     }
@@ -28,12 +27,9 @@ public extension URLSession  {
         }
         guard let foundData: Data = data,
             let metaData: URLResponse = responce else {
-                let incompleteData: Error = oklasoftError(errorCode: 1005,
-                                                          userInfo: nil,
-                                                          localizedDescription: NSLocalizedString("error1005", comment: "Incomplete or corrupted data was returned from the server with out error."))
                 NotificationCenter.default.post(name: .networkingErrorNotification,
                                                 object: nil,
-                                                userInfo:errorInfo(key: errorInfoKey, error: incompleteData).toDict())
+                                                userInfo:errorInfo(key: errorInfoKey, error: retunedBadDataError).toDict())
                 return
         }
         let httpInfo: HTTPInfo = HTTPInfo(key: userInfoKey,
