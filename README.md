@@ -1,4 +1,7 @@
 # OklasoftNetworking
+
+[![Build Status](https://travis-ci.org/oklasoftLLC/OklasoftNetworking.svg?branch=master)](https://travis-ci.org/oklasoftLLC/OklasoftNetworking)
+
 ## URLSession extention to simplify networking and make it a bit more swifty
 
 This framework is still under active development and only supports GET requests for now (it's a componet of a bigger project POST DELETE and PUT should come soon)
