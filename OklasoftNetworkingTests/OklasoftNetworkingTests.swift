@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import OklasoftNetworking
+import OklasoftError
 
 class OklasoftNetworkingTests: XCTestCase {
     

@@ -22,14 +22,14 @@ public extension URLSession  {
         if let foundError:Error = error {
             NotificationCenter.default.post(name: .networkingErrorNotification,
                                             object: nil,
-                                            userInfo:errorInfo(key: errorInfoKey, error: foundError).toDict())
+                                            userInfo:errorInfo(error: foundError).toDict())
             return
         }
         guard let foundData: Data = data,
             let metaData: URLResponse = responce else {
                 NotificationCenter.default.post(name: .networkingErrorNotification,
                                                 object: nil,
-                                                userInfo:errorInfo(key: errorInfoKey, error: retunedBadDataError).toDict())
+                                                userInfo:errorInfo(error: retunedBadDataError).toDict())
                 return
         }
         let httpInfo: HTTPInfo = HTTPInfo(key: userInfoKey,

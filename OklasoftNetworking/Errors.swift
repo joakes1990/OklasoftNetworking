@@ -7,21 +7,8 @@
 //
 
 import Foundation
+import OklasoftError
 
-struct oklasoftError: Error {
-    let domain: String = "com.oklasoft"
-    var errorCode: Int
-    var userInfo: [AnyHashable : Any]?
-    var localizedDescription: String
-    
-    func toError() -> Error {
-        let newError: NSError = NSError(domain: domain,
-                                        code: errorCode,
-                                        userInfo: userInfo)
-        return newError as Error
-    }
-    
-}
 let retunedBadDataError: oklasoftError = oklasoftError(errorCode: 1005,
                                                        userInfo: nil,
                                                        localizedDescription: "Incomplete or corrupted data was returned from the server with out error.")
