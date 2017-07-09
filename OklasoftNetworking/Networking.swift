@@ -7,11 +7,11 @@
 //
 
 import Foundation
+//MARK: Networking data types and structures
+public typealias networkCompletion = (Data?, URLResponse?, Error?) -> Void
 
 public extension URLSession  {
-    //MARK: Networking data types and structures
-    public typealias networkCompletion = (Data?, URLResponse?, Error?) -> Void
-    
+        
     public func getReturnedDataFrom(url: URL, with completion: networkCompletion?) {
         let task: URLSessionDataTask = self.dataTask(with: url,
                                                         completionHandler: completion ?? URLSession.standardCompletion)
