@@ -18,6 +18,31 @@ public extension URLSession  {
         task.resume()
     }
     
+    public func getReturnedDataFrom(url: URL, returning notification: Notification.Name) {
+        let task: URLSessionDataTask = self.dataTask(with: url) { (data, responce, error) in
+            if let foundError:Error = error {
+                NotificationCenter.default.post(name: .networkingErrorNotification,
+                                                object: nil,
+                                                userInfo:errorInfo(error: foundError).toDict())
+                return
+            }
+            guard let foundData: Data = data,
+                let metaData: URLResponse = responce else {
+                    NotificationCenter.default.post(name: .networkingErrorNotification,
+                                                    object: nil,
+                                                    userInfo:errorInfo(error: retunedBadDataError).toDict())
+                    return
+            }
+            let httpInfo: HTTPInfo = HTTPInfo(key: userInfoKey,
+                                              data: foundData,
+                                              metaData: metaData)
+            NotificationCenter.default.post(name: notification,
+                                            object: nil,
+                                            userInfo: httpInfo.toDict())
+        }
+        task.resume()
+    }
+    
     static let standardCompletion: networkCompletion = {(data, responce, error) in
         if let foundError:Error = error {
             NotificationCenter.default.post(name: .networkingErrorNotification,
