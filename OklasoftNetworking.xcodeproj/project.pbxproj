@@ -13,6 +13,7 @@
 		D0ACEEF41F05CD88005C35B6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* Networking.swift */; };
 		D0ACEEF61F05D283005C35B6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF51F05D283005C35B6 /* Notifications.swift */; };
 		D0ACEEF81F05D79C005C35B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF71F05D79C005C35B6 /* Errors.swift */; };
+		D0FCF8481F23A4590004EF02 /* OklasoftError.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05D3B561F0F22670020627D /* OklasoftError.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D0ACEED81F05CD5E005C35B6;
 			remoteInfo = OklasoftNetworking;
+		};
+		D0FCF8451F23A4470004EF02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05D3B511F0F22670020627D /* OklasoftError.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D05D3B421F0F20F30020627D;
+			remoteInfo = OklasoftError;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FCF8481F23A4590004EF02 /* OklasoftError.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +155,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D0FCF8461F23A4470004EF02 /* PBXTargetDependency */,
 			);
 			name = OklasoftNetworking;
 			productName = OklasoftNetworking;
@@ -266,6 +276,11 @@
 			isa = PBXTargetDependency;
 			target = D0ACEED81F05CD5E005C35B6 /* OklasoftNetworking */;
 			targetProxy = D0ACEEE41F05CD5E005C35B6 /* PBXContainerItemProxy */;
+		};
+		D0FCF8461F23A4470004EF02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OklasoftError;
+			targetProxy = D0FCF8451F23A4470004EF02 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
