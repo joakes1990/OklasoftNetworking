@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if os(OSX)
 import OklasoftError
+#elseif os(iOS)
+import OklasoftError_iOS_
+#endif
 
 let retunedBadDataError: oklasoftError = oklasoftError(errorCode: 1005,
                                                        userInfo: nil,
