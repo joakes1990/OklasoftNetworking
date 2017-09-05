@@ -10,7 +10,7 @@ import Foundation
 //MARK: Networking data types and structures
 public typealias networkCompletion = (Data?, URLResponse?, Error?) -> Void
 
-public class OKURLSession: URLSession  {
+open class OKURLSession: URLSession  {
     
     public var OKdelegate: OKURLSessionDelegate?
     public static let OKShared: OKURLSession = OKURLSession()
