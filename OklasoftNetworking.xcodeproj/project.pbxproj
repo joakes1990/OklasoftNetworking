@@ -10,14 +10,14 @@
 		D07D70411F24242500FE25C1 /* OklasoftNetworking_iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07D70381F24242500FE25C1 /* OklasoftNetworking_iOS_.framework */; };
 		D07D70461F24242500FE25C1 /* OklasoftNetworking_iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D70451F24242500FE25C1 /* OklasoftNetworking_iOS_Tests.swift */; };
 		D07D70481F24242600FE25C1 /* OklasoftNetworking_iOS_.h in Headers */ = {isa = PBXBuildFile; fileRef = D07D703A1F24242500FE25C1 /* OklasoftNetworking_iOS_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D07D70511F2424C100FE25C1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* Networking.swift */; };
+		D07D70511F2424C100FE25C1 /* OKURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* OKURLSession.swift */; };
 		D07D70521F2424C100FE25C1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF51F05D283005C35B6 /* Notifications.swift */; };
 		D07D70531F2424C100FE25C1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF71F05D79C005C35B6 /* Errors.swift */; };
 		D07D706D1F24274300FE25C1 /* OklasoftError_iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07D70661F24263600FE25C1 /* OklasoftError_iOS_.framework */; };
 		D0ACEEE31F05CD5E005C35B6 /* OklasoftNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ACEED91F05CD5E005C35B6 /* OklasoftNetworking.framework */; };
 		D0ACEEE81F05CD5E005C35B6 /* OklasoftNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEE71F05CD5E005C35B6 /* OklasoftNetworkingTests.swift */; };
 		D0ACEEEA1F05CD5E005C35B6 /* OklasoftNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D0ACEEDC1F05CD5E005C35B6 /* OklasoftNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0ACEEF41F05CD88005C35B6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* Networking.swift */; };
+		D0ACEEF41F05CD88005C35B6 /* OKURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF31F05CD88005C35B6 /* OKURLSession.swift */; };
 		D0ACEEF61F05D283005C35B6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF51F05D283005C35B6 /* Notifications.swift */; };
 		D0ACEEF81F05D79C005C35B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEEF71F05D79C005C35B6 /* Errors.swift */; };
 		D0FCF8481F23A4590004EF02 /* OklasoftError.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05D3B561F0F22670020627D /* OklasoftError.framework */; };
@@ -82,7 +82,7 @@
 		D0ACEEE21F05CD5E005C35B6 /* OklasoftNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OklasoftNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACEEE71F05CD5E005C35B6 /* OklasoftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OklasoftNetworkingTests.swift; sourceTree = "<group>"; };
 		D0ACEEE91F05CD5E005C35B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0ACEEF31F05CD88005C35B6 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D0ACEEF31F05CD88005C35B6 /* OKURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKURLSession.swift; sourceTree = "<group>"; };
 		D0ACEEF51F05D283005C35B6 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		D0ACEEF71F05D79C005C35B6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,7 +186,7 @@
 			children = (
 				D0ACEEDC1F05CD5E005C35B6 /* OklasoftNetworking.h */,
 				D0ACEEDD1F05CD5E005C35B6 /* Info.plist */,
-				D0ACEEF31F05CD88005C35B6 /* Networking.swift */,
+				D0ACEEF31F05CD88005C35B6 /* OKURLSession.swift */,
 				D0ACEEF51F05D283005C35B6 /* Notifications.swift */,
 				D0ACEEF71F05D79C005C35B6 /* Errors.swift */,
 			);
@@ -402,7 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07D70511F2424C100FE25C1 /* Networking.swift in Sources */,
+				D07D70511F2424C100FE25C1 /* OKURLSession.swift in Sources */,
 				D07D70521F2424C100FE25C1 /* Notifications.swift in Sources */,
 				D07D70531F2424C100FE25C1 /* Errors.swift in Sources */,
 			);
@@ -422,7 +422,7 @@
 			files = (
 				D0ACEEF61F05D283005C35B6 /* Notifications.swift in Sources */,
 				D0ACEEF81F05D79C005C35B6 /* Errors.swift in Sources */,
-				D0ACEEF41F05CD88005C35B6 /* Networking.swift in Sources */,
+				D0ACEEF41F05CD88005C35B6 /* OKURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
