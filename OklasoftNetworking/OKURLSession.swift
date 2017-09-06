@@ -36,7 +36,7 @@ open class OKURLSession: URLSession  {
     }
     
     public func getReturnedDataFrom(url: URL, completion: @escaping networkCompletion) {
-        let task: URLSessionDataTask = self.dataTask(with: url, completionHandler: completion)
+        let task: URLSessionDataTask = URLSession.shared.dataTask(with: url, completionHandler: completion)
         task.resume()
     }
 }
